@@ -23,7 +23,59 @@ void main(List<String> arguments) {
     final jugem = '''
     じゅげむじゅげむごこうのすりきれ
     かいじゃりすいぎょうのすいぎょうまつ
+    うらいまつ
+    くうねるところのすむところ
     ''';
     print(jugem);
 
+    int a = 10;
+    double b = 20.5;
+
+    print(a);
+    print(b);
+
+    bool isLogin = true;
+    print('isLogin=$isLogin');
+
+    dynamic asdfd = "なんでもはいるよ";
+    print(asdfd);
+    asdfd = 12;
+    print(asdfd);
+
+    //Array
+    List<int> numbers = [1,2,3,4,5];
+    print(numbers);
+    List<String> languages = ["dart","PHP","java","Ruby"];
+    print(languages);
+    List<bool> booleans = [true,false,true,true];
+    print(booleans);
+
+    languages.forEach((language){
+        print(language);
+    });
+
+    numbers.forEach((num){
+        print(num);
+    });
+
+    final say = "good morning";
+
+    //finalは実行時、constはコンパイル時に値が確定する
+    final DateTime date = DateTime.now();
+    print(date);
+
+    // これはエラーになる。リテラルじゃないとconstは使えないかも
+    /* const DateTime date2 = DateTime.now();
+    print(date2); */
+
+    Todo shopping = Todo();
+    shopping.title = '買い物';
+    shopping.isDone = false;
+    print(shopping.title);
+    print(shopping.isDone);
+}
+
+class Todo{
+    String? title;
+    bool? isDone;
 }
